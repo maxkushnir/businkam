@@ -4,14 +4,14 @@
     <div class="container">
         <div class="row">
 
-            <h3>Кабинет пользователя</h3>
+            <h3>Кабінет користувача</h3>
             
-            <h4>Привет, <?php echo $user['name'];?>!</h4>
+            <h4>Привіт, <?php echo $user['name'];?>!</h4><br/>
             <ul>
-                <li><a href="/cabinet/edit">Редактировать данные</a></li>
+                <li class="btn btn-default"><a href="/cabinet/edit">Редагувати данні</a></li>
                 <!--<li><a href="/cabinet/history">Список покупок</a></li>-->
             </ul>
-            
+       
         </div>
     </div>
 </section>

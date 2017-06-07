@@ -4,10 +4,11 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-sm-4 col-sm-offset-4 padding-right">
+            <div class="col-sm-4 col-sm-offset-4 padding-left">
                 
                 <?php if ($result): ?>
-                    <p>Данные отредактированы!</p>
+                    <p>Данні відредаговано!</p>
+                    <li class="btn btn-default"><a href="/cabinet">Повернутись</a></li>
                 <?php else: ?>
                     <?php if (isset($errors) && is_array($errors)): ?>
                         <ul>
@@ -18,15 +19,18 @@
                     <?php endif; ?>
 
                     <div class="signup-form"><!--sign up form-->
-                        <h2>Редактирование данных</h2>
+                        <h2>Редагування данних</h2>
                         <form action="#" method="post">
-                            <p>Имя:</p>
-                            <input type="text" name="name" placeholder="Имя" value="<?php echo $name; ?>"/>
+                            <p>Ім'я:</p>
+                            <input type="text" name="name" placeholder="Ім'я" value="<?php echo $name; ?>"/>
                             
                             <p>Пароль:</p>
                             <input type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>"/>
+
+                            <p>Email:</p>
+                            <input type="email" name="email" placeholder="Email" value="<?php echo $email; ?>"/>
                             <br/>
-                            <input type="submit" name="submit" class="btn btn-default" value="Сохранить" />
+                            <input type="submit" name="submit" class="btn btn-default" value="Зберегти" />
                         </form>
                     </div><!--/sign up form-->
                 

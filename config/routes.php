@@ -38,11 +38,13 @@ return array(
     'admin/order/view/([0-9]+)' => 'adminOrder/view/$1',
     'admin/order' => 'adminOrder/index',
     //Article:
+    'blog/article-([0-9]+)' => "Article/view/$1",
+    'blog/page-([0-9]+)' => "Article/index/$1",
     'blog' => "Article/index",
     'admin/article/create' => 'AdminArticle/create',
     'admin/article/edit/([0-9]+)' => 'AdminArticle/edit/$1',
     'admin/article/delete/([0-9]+)' => 'AdminArticle/delete/$1',
-    'admin/article' => 'AdminArticle/index',
+    'admin/article' => 'AdminArticle/index',    
     //Галерея:
     'admin/gallery/upload' => "AdminGallery/upload",
     'admin/gallery' => "AdminGallery/index",

@@ -23,9 +23,14 @@ abstract class AdminBase
         if ($user['role'] == 'admin') {
             return true;
         }
+        //Повідомлення про відсутність прав
+        echo '<script type="text/javascript">alert("Недостатньо прав!");</script>';
+        $url="/user/login";
+        echo '<script type="text/javascript">'; 
+        echo 'window.location.href="'.$url.'";'; 
+        echo '</script>'; 
+        die();// Иначе завершаем работу.
 
-        // Иначе завершаем работу с сообщением об закрытом доступе
-        die('Access denied');
     }
 
 }

@@ -1,5 +1,7 @@
 <?php
 class Article{
+
+	const SHOW_BY_DEFAULT = 3;
 	
 	public static function createArticle(	
 										$name,
@@ -39,7 +41,7 @@ class Article{
 		$DBH = Db::getConnection(); 
 
 		$sql = '
-				SELECT id,name,user_id,time_create,description,context
+				SELECT id,name,user_id,category_id,time_create,description,context
 				FROM article
 			';
 			
@@ -104,6 +106,7 @@ class Article{
 		
 		$query->execute();
 
+		return($query);
 	}
 
 	public static function deleteArticleById($id){
@@ -120,4 +123,27 @@ class Article{
 		
 		$query->execute();
 	}
+/**
+     * Возвращаем количество статей в указанной категории
+     * @param integer $categoryId
+     * @return integer
+     */
+	public static function getTotalArticlesInCategory()
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса к БД
+        $sql = 'SELECT count(id) AS count FROM article';
+
+        // Используется подготовленный запрос
+        $result = $db->prepare($sql);
+  
+        // Выполнение команды
+        $result->execute();
+
+        // Возвращаем значение count - количество
+        $row = $result->fetch();
+        return $row['count'];
+    }
 }

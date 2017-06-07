@@ -35,16 +35,17 @@ class User
      * @param integer $id <p>id пользователя</p>
      * @param string $name <p>Имя</p>
      * @param string $password <p>Пароль</p>
+     * @param string $email <p>Email</p>
      * @return boolean <p>Результат выполнения метода</p>
      */
-    public static function edit($id, $name, $password)
+    public static function edit($id, $name, $password, $email)
     {
         // Соединение с БД
         $db = Db::getConnection();
 
         // Текст запроса к БД
         $sql = "UPDATE user 
-            SET name = :name, password = :password 
+            SET name = :name, password = :password, email = :email 
             WHERE id = :id";
 
         // Получение и возврат результатов. Используется подготовленный запрос
@@ -52,6 +53,7 @@ class User
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
+        $result->bindParam(':email', $email, PDO::PARAM_STR);
         return $result->execute();
     }
 

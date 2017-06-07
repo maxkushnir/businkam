@@ -37,6 +37,7 @@ class CabinetController
         // Заполняем переменные для полей формы
         $name = $user['name'];
         $password = $user['password'];
+        $email = $user['email'];
 
         // Флаг результата
         $result = false;
@@ -47,21 +48,25 @@ class CabinetController
             // Получаем данные из формы редактирования
             $name = $_POST['name'];
             $password = $_POST['password'];
+            $email = $_POST['email'];
 
             // Флаг ошибок
             $errors = false;
 
             // Валидируем значения
             if (!User::checkName($name)) {
-                $errors[] = 'Имя не должно быть короче 2-х символов';
+                $errors[] = "Ім'я не повинно бути коротшим 2-х символів";
             }
             if (!User::checkPassword($password)) {
-                $errors[] = 'Пароль не должен быть короче 6-ти символов';
+                $errors[] = 'Пароль не повинен бути коротшим 6-и символів';
             }
+            if (!User::checkEmail($email)) {
+                $errors[] = 'Введіть email в форматі "name@host.com"';
+            }           
 
             if ($errors == false) {
                 // Если ошибок нет, сохраняет изменения профиля
-                $result = User::edit($userId, $name, $password);
+                $result = User::edit($userId, $name, $password, $email);
             }
         }
 

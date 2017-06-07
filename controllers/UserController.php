@@ -29,16 +29,16 @@ class UserController
 
             // Валидация полей
             if (!User::checkName($name)) {
-                $errors[] = 'Имя не должно быть короче 2-х символов';
+                $errors[] = "Ім'я не повинно бути коротшим 2-х символів";
             }
             if (!User::checkEmail($email)) {
-                $errors[] = 'Неправильный email';
+                $errors[] = 'Неправильний email';
             }
             if (!User::checkPassword($password)) {
-                $errors[] = 'Пароль не должен быть короче 6-ти символов';
+                $errors[] = 'Пароль не повинен бути коротшим 6-и символів';
             }
             if (User::checkEmailExists($email)) {
-                $errors[] = 'Такой email уже используется';
+                $errors[] = 'Такий email вже використовується';
             }
             
             if ($errors == false) {
@@ -74,10 +74,10 @@ class UserController
 
             // Валидация полей
             if (!User::checkEmail($email)) {
-                $errors[] = 'Неправильный email';
+                $errors[] = 'Неправильний email';
             }
             if (!User::checkPassword($password)) {
-                $errors[] = 'Пароль не должен быть короче 6-ти символов';
+                $errors[] = 'Пароль не повинен бути коротшим 6-и символів';
             }
 
             // Проверяем существует ли пользователь
@@ -85,7 +85,7 @@ class UserController
 
             if ($userId == false) {
                 // Если данные неправильные - показываем ошибку
-                $errors[] = 'Неправильные данные для входа на сайт';
+                $errors[] = 'Неправильні данні для входу на сайт';
             } else {
                 // Если данные правильные, запоминаем пользователя (сессия)
                 User::auth($userId);
@@ -106,7 +106,7 @@ class UserController
     public function actionLogout()
     {
         // Стартуем сессию
-        session_start();
+        // session_start();
         
         // Удаляем информацию о пользователе из сессии
         unset($_SESSION["user"]);

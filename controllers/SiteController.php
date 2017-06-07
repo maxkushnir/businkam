@@ -31,12 +31,12 @@ class SiteController
     public function actionContact()
     {
 
-        // Переменные для формы
+        // Змінні для форми
         $userEmail = false;
         $userText = false;
         $result = false;
 
-        // Обработка формы
+        // Обробка форми
         if (isset($_POST['submit'])) {
             // Если форма отправлена 
             // Получаем данные из формы
@@ -46,29 +46,29 @@ class SiteController
             // Флаг ошибок
             $errors = false;
 
-            // Валидация полей
+            // Валідація полів
             if (!User::checkEmail($userEmail)) {
-                $errors[] = 'Неправильный email';
+                $errors[] = 'Неправильний email';
             }
 
             if ($errors == false) {
-                // Если ошибок нет
-                // Отправляем письмо администратору 
-                $adminEmail = 'php.start@mail.ru';
+                // Якщо помилок немає
+                // Відправляємо лист адміністратору 
+                $adminEmail = 'businkam.mail@gmail.com';
                 $message = "Текст: {$userText}. От {$userEmail}";
-                $subject = 'Тема письма';
+                $subject = 'Тема листа';
                 $result = mail($adminEmail, $subject, $message);
                 $result = true;
             }
         }
 
-        // Подключаем вид
+        // Підключаємо вид
         require_once(ROOT . '/views/site/contact.php');
         return true;
     }
     
     /**
-     * Action для страницы "О магазине"
+     * Action для сторінки "Про сайт"
      */
     public function actionAbout()
     {
