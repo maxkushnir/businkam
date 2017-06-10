@@ -1527,10 +1527,8 @@
 
   Dropzone.version = "5.0.0";
 
-  Dropzone.options = {}
-};
 
-  };
+  Dropzone.options = {};
 
   Dropzone.optionsForElement = function(element) {
     if (element.getAttribute("id")) {
