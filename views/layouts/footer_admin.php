@@ -1,8 +1,8 @@
-    <div class="page-buffer"></div>
+<!--     <div class="page-buffer"></div>
 </div>
-
+ -->
 <footer id="footer" class="page-footer"><!--Footer-->
-    <div class="footer-bottom">
+    <div class="footer-middle">
         <div class="container">
             <div class="row">
                 <p class="pull-left">Copyright © 2017</p>
@@ -20,9 +20,11 @@
 <script src="/template/js/bootstrap.min.js"></script>
 <script src="/template/js/jquery.scrollUp.min.js"></script>
 <script src="/template/js/price-range.js"></script>
-<script src="/template/js/jquery.prettyPhoto.js"></script>
+<!-- <script src="/template/js/jquery.prettyPhoto.js"></script> -->
 <script src="/template/js/main.js"></script>
 <script src="/template/js/tools.js"></script>
+<script src="/template/js/dropzone.js"></script>
+
 <script>
     $(document).ready(function(){
         $(".add-to-cart").click(function () {

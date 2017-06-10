@@ -22,8 +22,9 @@ if(!empty($errors)){
 	<div class="row">
 		<div class="col-xs-1 col-sm-1 col-md-2 col-lg-3"></div>
 		<div class="col-xs-10 col-sm-10 col-md-8 col-lg-6 content text-center">
-				<form method="post" enctype="multipart/form-data">
-				<input name="userFile[]" placeholder="Завантажити" type="file" multiple><br>
+			<h1 class="text-center"><?php echo $title; ?></h1>
+			<form method="post" enctype="multipart/form-data" name="dropzoneFile" class='dropzone'>
+				<input name="userFile[]" type="file" multiple><br>
 				<div class="form-group">
 					<button type="submit" name="userfile" type="file" class="btn btn-default">Завантажити</button>
 				</div>
@@ -33,6 +34,13 @@ if(!empty($errors)){
 	</div>
 </div>
 
+<form action="/file-upload" class="dropzone">
+  <div class="fallback">
+    <input name="file" type="file" multiple />
+  </div>
+</form>
+
+<script type="text/javascript">$("div#myId").dropzone({ url: "/file/post" });</script>
 <?php
 require_once ROOT."/views/layouts/footer_admin.php";
 ?>

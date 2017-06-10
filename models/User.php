@@ -222,5 +222,15 @@ class User
 
         return $result->fetch();
     }
+    public static function getAllUsers(){
+        $DBH = Db::getConnection();
+
+        $sql = 'SELECT * FROM user';
+
+        $result = $DBH->prepare($sql);
+        $result->execute();
+        
+        return $result->fetchAll();
+    }   
 
 }

@@ -32,7 +32,7 @@
                         <td><?php echo $product['code']; ?></td>
                         <td><?php echo $product['name']; ?></td>
                         <td><?php echo $product['price']; ?></td>  
-                        <td><button class="btn btn-secondary"><a href="/admin/product/update/<?php echo $product['id']; ?>" title="Редагувати"><i class="white glyphicon glyphicon-pencil" aria-hidden="true"></i></a></button></td>
+                        <td><button class="btn white"><a href="/admin/product/update/<?php echo $product['id']; ?>" title="Редагувати"><i class="white glyphicon glyphicon-pencil" aria-hidden="true"></i></a></button></td>
                         <td><button class="deleteAjax btn btn-danger" data-nameModel="product" data-id="<?php echo $product['id']; ?>" title="Видалити"><span class="custom  glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
                     </tr>
                 <?php

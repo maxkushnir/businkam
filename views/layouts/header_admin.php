@@ -6,15 +6,17 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title>Адмінпанель</title>
-        <link href="/template/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/template/css/bootstrap.css" rel="stylesheet">
         <link href="/template/css/font-awesome.min.css" rel="stylesheet">
         <link href="/template/css/prettyPhoto.css" rel="stylesheet">
         <link href="/template/css/price-range.css" rel="stylesheet">
         <link href="/template/css/animate.css" rel="stylesheet">
         <link href="/template/css/main.css" rel="stylesheet">
         <link href="/template/css/responsive.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-        
+        <link href="/template/css/checkbox.css" rel="stylesheet">
+        <link href="/template/css/mdb.css" rel="stylesheet">
+        <link href="/template/css/basic.css" rel="stylesheet">
+        <link href="/template/css/dropzone.css" rel="stylesheet">
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -30,22 +32,27 @@
     <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="/admin">Адмін панель</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Мобільна версія</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+      <a class="navbar-brand" href="/admin">Адмінпанель</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="/admin/product" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Товари<span class="caret"></span></a>
+          <a href="/admin/product" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Товари <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/admin/product/create">Додати товар</a></li>
             <li><a href="/admin/product">Усі товари</a></li>
           </ul>
         </li>
-       
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Категорії<span class="caret"></span></a>
+          <a href="/admin/category" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Категорії<span class="caret"></span></a>
           <ul class="dropdown-menu">
           <li><a href="/admin/category/create">Додати категорію</a></li>
           <li><a href="/admin/category">Усі категорії</a></li>
@@ -53,27 +60,24 @@
         </li>
         <li><a href="/admin/order">Замовлення</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Статті<span class="caret"></span></a>
+          <a href="/admin/article" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Статті<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/admin/article/create">Створити</a></li>
             <li><a href="/admin/article">Переглянути</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Галерея<span class="caret"></span></a>
+          <a href="/admin/gallery" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Галерея<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/admin/gallery/upload">Додати</a></li>
             <li><a href="/admin/gallery">Переглянути</a></li>
           </ul>
         </li>
       </ul>
-        <div class="col-sm-6">
-            <div class="pull-right">
-                <ul class="nav navbar-nav">
-                    <li><a href="/"><i class="glyphicon glyphicon-log-out" title="Вихід"></i></a></li>
-                </ul>
-            </div>
-        </div>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a class="navbar-brand" href="/">На сайт</a></li>
+        <li><a href="/user/logout"><i class="glyphicon glyphicon-log-out" title="Вихід"></i></a></li>
+        </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>  

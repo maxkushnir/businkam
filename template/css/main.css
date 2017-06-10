@@ -364,12 +364,15 @@ ul.sub-menu {
 #footer {
     background: #F0F0E9;
     height: 50px;
+    bottom: 0;
+    width:100%;
 }
 
 
 .footer-top .container {
     border-bottom: 1px solid #E0E0DA;
     padding-bottom: 20px;
+    vertical-align: middle;
 }
 
 .companyinfo {
@@ -563,6 +566,7 @@ ul.sub-menu {
 
 .footer-bottom {
     padding-top: 15px;
+    
 }
 
 .footer-bottom p {
@@ -570,6 +574,7 @@ ul.sub-menu {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     margin-left: 15px;
+
 }
 
 .footer-bottom p span a {
@@ -578,6 +583,12 @@ ul.sub-menu {
     text-decoration: underline;
 }
 
+.footer-middle{
+    color: #363432;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-left: 15px;
+}
 
 /*************************
 ******* Home ******
