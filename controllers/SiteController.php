@@ -76,5 +76,11 @@ class SiteController
         require_once(ROOT . '/views/site/about.php');
         return true;
     }
+    public function actionGallery()
+    {
+        // Подключаем вид
+        require_once(ROOT . '/views/site/gallery.php');
+        return true;
+    }
 
 }

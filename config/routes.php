@@ -52,6 +52,7 @@ return array(
     // Админпанель:
     'admin' => 'admin/index',
     // О магазине
+    'gallery' => "site/gallery",
     'contacts' => 'site/contact',
     'about' => 'site/about',
     // Главная страница
