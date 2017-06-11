@@ -121,6 +121,7 @@ class Resource{
 	}
 
 	public static function deleteResourceById($id){
+		
 		$file = Resource::getResourceById($id);
 		$DBH = Db::getConnection(); 
 

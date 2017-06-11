@@ -22,9 +22,9 @@
                     <th>Телефон покупця</th>
                     <th>Дата оформлення</th>
                     <th>Статус</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>Переглянути</th>
+                    <th>Оновити</th>
+                    <th>Видалити</th>
                 </tr>
                 <?php foreach ($ordersList as $order): ?>
                     <tr>
@@ -37,8 +37,8 @@
                         <td><?php echo $order['user_phone']; ?></td>
                         <td><?php echo $order['date']; ?></td>
                         <td><?php echo Order::getStatusText($order['status']); ?></td>    
-                        <td><button class="btn btn-outline-danger  "><a href="/admin/order/view/<?php echo $order['id']; ?>" title="Переглянути"><i class="glyphicon glyphicon-eye-open"></i></a></button></td>
-                        <td><button class="btn btn-secondary"><a href="/admin/order/update/<?php echo $order['id']; ?>" title="Редагувати"><i class="glyphicon glyphicon-pencil"></i></a></button></td>
+                        <td><button class="btn white  "><a href="/admin/order/view/<?php echo $order['id']; ?>" title="Переглянути"><i class="glyphicon glyphicon-eye-open"></i></a></button></td>
+                        <td><button class="btn btn-info"><a href="/admin/order/update/<?php echo $order['id']; ?>" title="Редагувати"><i class="glyphicon glyphicon-pencil"></i></a></button></td>
                         <td><button class="deleteAjax btn btn-danger" data-nameModel="order" data-id="<?php echo $order['id']; ?>" title="Видалити"><span class="custom  glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
                     </tr>
                 <?php endforeach; ?>

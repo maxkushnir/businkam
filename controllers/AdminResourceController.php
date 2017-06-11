@@ -97,5 +97,6 @@ class AdminResourceController extends AdminBase{
 		require_once ROOT."/views/admin_gallery/AdminResourceUpload.php";
 		return true;
 	}
+
 }
 

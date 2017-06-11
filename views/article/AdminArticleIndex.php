@@ -43,7 +43,7 @@ require_once ROOT."/views/layouts/header_admin.php";
                         <td><?php echo $article['name']; ?></td>
                         <td><?php echo $article['user_id']; ?></td>
                         <td><?php echo $article['time_create']; ?></td>
-                        <td><button class="btn btn-secondary"><a href="/admin/article/edit/<?php echo $article['id']; ?>"><span class="custom glyphicon glyphicon-pencil text-center"></span></a></button></td>
+                        <td><button class="btn white"><a href="/admin/article/edit/<?php echo $article['id']; ?>"><span class="custom glyphicon glyphicon-pencil text-center"></span></a></button></td>
                         <td><button class="deleteAjax btn btn-danger" data-nameModel="article" data-id="<?php echo $article['id']; ?>" title="Видалити"><span class="custom  glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
                     </tr>
                     <?php

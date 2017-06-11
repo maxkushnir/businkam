@@ -42,7 +42,7 @@ class AjaxController{
 				break;
 
 			case 'images':
-			 	unlink(ROOT.'/upload/images/'.$id);
+				Resource::deleteResourceById($id);
 				break;
 			
 			default:

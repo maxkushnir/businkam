@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title>Головна</title>
-        <link href="/template/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/template/css/bootstrap.css" rel="stylesheet">
         <link href="/template/css/font-awesome.min.css" rel="stylesheet">
         <link href="/template/css/prettyPhoto.css" rel="stylesheet">
         <link href="/template/css/price-range.css" rel="stylesheet">
@@ -25,6 +25,27 @@
         <link rel="apple-touch-icon-precomposed" href="/template/images/ico/apple-touch-icon-57-precomposed.png">
     </head><!--/head-->
 
+    <style type="text/css">
+        #header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .header_top{
+            width:100%;
+        }
+        .social-icons{
+            justify-content: center;
+        }
+        .header-middle{
+            align-self: center;
+        }
+        .header-bottom{
+            align-self: center;
+        }
+    </style>
+
     <body>
         <div class="page-wrapper">
 
@@ -32,50 +53,48 @@
             <header id="header"><!--header-->
                 <div class="header_top"><!--header_top-->
                     <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="contactinfo">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="#"><i class="fa fa-phone"></i> +38 098 11 28 952</a></li>
-                                        <li><a href="#"><i class="fa fa-envelope"></i> businkam.mail@gmail.com</a></li>
+                        <div class="social-icons row col-xs-12 col-sm-6 col-md-12">
+                            
+                                <div class="contactinfo ">
+                                    <ul class="nav navbar-nav">
+                                        <!-- <li><a href="#"><i class="fa fa-phone"></i>+38 098 11 28 952 </a></li>
+                                        <li class="btn btn-sm"><a href="mailto:businkam.mail@gmail.com"><i class="fa fa-envelope"></i>businkam.mail@gmail.com </a></li> -->
+                                        <li class="btn btn-sm"><a href="https://www.instagram.com/maria_businkam/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+                                        <li class="btn btn-sm"><a href="https://www.facebook.com/businkam.maria"><i class="fa fa-facebook fa-2x"></i></a></li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
+                            
                                 <div class="social-icons pull-right">
                                     <ul class="nav navbar-nav">
                                         <li><a href="/cart">
-                                                <i class="fa fa-shopping-cart"></i>Корзина </a>
+                                                <i class="fa fa-shopping-cart fa-2x" ></i></a>
                                         </li>
                                         <?php if (User::isGuest()): ?>                                        
-                                            <li><a href="/user/login/"><i class="fa fa-lock"></i>Вхід</a></li>
+                                            <li><a href="/user/login/"><i class="fa fa-lock fa-2x"></i></a></li>
                                         <?php else: ?>
-                                            <li><a href="/cabinet/"><i class="fa fa-user"></i>Акаунт </a></li>
-                                            <li><a href="/user/logout/"><i class="fa fa-unlock"></i>Вихід </a></li>
+                                            <li><a href="/cabinet/"><i class="fa fa-user fa-2x"></i></a></li>
+                                            <li><a href="/user/logout/"><i class="fa fa-unlock fa-2x"></i></a></li>
                                         <?php endif; ?>
                                     </ul>
                                 </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div><!--/header_top-->
 
                 <div class="header-middle"><!--header-middle-->
-                    <div class="container">
-                        <div class="row">
+                    
+                       
                             <div class="col-sm-4">
                                 <div class="logo pull-left">
                                     <a href="/"><img src="/template/images/home/logo.png" alt="" /></a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        
                 </div><!--/header-middle-->
 
-                <div class="header-bottom"><!--header-bottom-->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
+                <div class="header-bottom"><!--header-bottom-->                      
+                            <div class="main-menu">
                                 <div class="navbar-header">
                                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                         <span class="sr-only">Toggle navigation</span>
@@ -100,8 +119,6 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                    </div>
                 </div><!--/header-bottom-->
 
             </header><!--/header-->
