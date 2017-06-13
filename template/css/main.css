@@ -374,7 +374,10 @@ ul.sub-menu {
     padding-bottom: 20px;
     vertical-align: middle;
 }
-
+#edit-info{
+    position: relative;
+    right: 0;
+}
 .companyinfo {
     margin-top: 57px;
 }
@@ -1465,7 +1468,7 @@ h2.title {
 }
 
 .signup-form {
-
+    text-align: center;
 }
 
 .login-form h2, .signup-form h2 {
@@ -2570,4 +2573,7 @@ h2.title {
 }
 .btn {
     vertical-align:middle;
+}
+.reg-link{
+    text-align: center;
 }
