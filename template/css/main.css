@@ -84,7 +84,7 @@ a#scrollUp i{
 **************************/
 
 .header_top {
-    background: none repeat scroll 0 0 #F0F0E9;
+    background: none repeat scroll 0 0 #CCCCCC;
 }
 
 .contactinfo ul li:first-child{
@@ -153,6 +153,7 @@ a#scrollUp i{
 }
 
 .header-middle .container .row {
+    background-color: #f2f2f2;
     border-bottom: 1px solid #f5f5f5;
     margin-left: 0;
     margin-right: 0;
@@ -269,7 +270,7 @@ a#scrollUp i{
 }
 
 .search_box input {
-    background: #F0F0E9;
+    background: #CCCCCC;
     border: medium none;
     color: #B2B2B2;
     font-family: 'roboto';
@@ -362,7 +363,7 @@ ul.sub-menu {
 **************************/
 
 #footer {
-    background: #F0F0E9;
+    background: #CCCCCC;
     height: 50px;
     bottom: 0;
     width:100%;
@@ -1152,7 +1153,7 @@ h2.title {
 }
 
 .pagination  li  a, .pagination  li  span {
-    background-color: #f0f0e9;
+    background-color: #CCCCCC;
     border: 0;
     float: left;
     line-height: 1.42857;
@@ -1376,7 +1377,7 @@ h2.title {
 }
 
 #reviews form span input {
-    background:#F0F0E9;
+    background:#CCCCCC;
     border: 0 none;
     color: #A6A6A1;
     font-family: 'Roboto', sans-serif;
@@ -1390,7 +1391,7 @@ h2.title {
 }
 
 #reviews textarea {
-    background: #F0F0E9;
+    background: #CCCCCC;
     border: medium none;
     color: #A6A6A1;
     height: 195px;
@@ -1661,7 +1662,7 @@ h2.title {
 }
 
 .cart_quantity_button a {
-    background:#F0F0E9;
+    background:#CCCCCC;
     color: #696763;
     display: inline-block;
     font-size: 16px;
@@ -1691,7 +1692,7 @@ h2.title {
 
 
 .cart_delete a {
-    background:#F0F0E9;
+    background:#CCCCCC;
     color: #FFFFFF;
     padding: 5px 7px;
     font-size: 16px
@@ -1772,7 +1773,7 @@ h2.title {
 
 .user_info .single_field.zip-field input {
     background: transparent;
-    border: 1px solid#F0F0E9
+    border: 1px solid#CCCCCC
 }
 
 .user_info > li {
@@ -1784,7 +1785,7 @@ h2.title {
 }
 
 .user_info input, select, textarea {
-    background: #F0F0E9;
+    background: #CCCCCC;
     border:0;
     color: #696763;
     padding: 5px;
@@ -1829,7 +1830,7 @@ h2.title {
 }
 
 .register-req, .step-one .heading {
-    background: none repeat scroll 0 0 #F0F0E9;
+    background: none repeat scroll 0 0 #CCCCCC;
     color: #363432;
     font-size: 20px;
     margin-bottom: 35px;
@@ -1933,7 +1934,7 @@ h2.title {
 .form-two > form > select, 
 .form-two > form > input, 
 .form-one > form > input {
-    background:#F0F0E9;
+    background:#CCCCCC;
     border: 0 none;
     margin-bottom:10px;
     padding: 10px;
@@ -2060,7 +2061,7 @@ h2.title {
 
 .blog-post-area 
 .post-meta ul li {
-    background:#F0F0E9;
+    background:#CCCCCC;
     float: left;
     margin-right: 10px;
     padding: 0 5px;
@@ -2125,7 +2126,7 @@ h2.title {
 
 .pagination-area 
 .pagination li a {
-    background:#F0F0E9;
+    background:#CCCCCC;
     border: 0 none;
     border-radius: 0;
     color: #696763;
@@ -2152,7 +2153,7 @@ h2.title {
 }
 
 .pager-area .pager li a {
-    background:#F0F0E9;
+    background:#CCCCCC;
     border: 0 none;
     border-radius: 0;
     color: #696763;
@@ -2287,7 +2288,7 @@ h2.title {
     display: block;
     font-size: 10px;
     padding: 1px;
-    background:#F0F0E9;
+    background:#CCCCCC;
 }
 
 .blog-socials ul li a:hover {
@@ -2344,7 +2345,7 @@ h2.title {
 
 
 .sinlge-post-meta li {
-    background:#F0F0E9;
+    background:#CCCCCC;
     color: #363432;
     float: left;
     font-size: 10px;

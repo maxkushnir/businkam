@@ -8,10 +8,8 @@
     <div class="container">
         <div class="row">
 
-            <br/>
-                        
+            <br/>         
             <h4>Список замовлень</h4>
-
             <br/>
 
             
@@ -37,8 +35,8 @@
                         <td><?php echo $order['user_phone']; ?></td>
                         <td><?php echo $order['date']; ?></td>
                         <td><?php echo Order::getStatusText($order['status']); ?></td>    
-                        <td><button class="btn white  "><a href="/admin/order/view/<?php echo $order['id']; ?>" title="Переглянути"><i class="glyphicon glyphicon-eye-open"></i></a></button></td>
-                        <td><button class="btn btn-info"><a href="/admin/order/update/<?php echo $order['id']; ?>" title="Редагувати"><i class="glyphicon glyphicon-pencil"></i></a></button></td>
+                        <td><button class="btn btn-info"><i class="glyphicon glyphicon-eye-open"></i><a href="/admin/order/view/<?php echo $order['id']; ?>" title="Переглянути"></a></button></td>
+                        <td><button class="btn btn-info"><i class="glyphicon glyphicon-pencil"></i><a href="/admin/order/update/<?php echo $order['id']; ?>" title="Редагувати"></a></button></td>
                         <td><button class="deleteAjax btn btn-danger" data-nameModel="order" data-id="<?php echo $order['id']; ?>" title="Видалити"><span class="custom  glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
                     </tr>
                 <?php endforeach; ?>

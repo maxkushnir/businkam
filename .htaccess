@@ -1,4 +1,4 @@
-AddDefaultCharset utf-8
+﻿AddDefaultCharset utf-8
 
 RewriteEngine on
 RewriteBase /
@@ -18,3 +18,5 @@ RewriteRule ^(.*)$ index.php
 #RewriteCond %{REQUEST_FILENAME} -d
 #RewriteRule ^.*$ - [L]
 #RewriteRule ^.*$ index.php [L]
+
+ErrorDocument 404 /template/404.php

@@ -1,51 +1,48 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
-
+<body>
+<style type="text/css">
+    .slider{
+        margin:1%;
+    }
+    .line{
+        display: block;
+        position:relative;
+        margin-top:10px;
+        border-bottom: 2px solid #AFAFAF;
+        line-height: 2px;
+        max-width: 100%;
+        position:relative;
+    }
+</style>
 <section>
+
     <div class="container">
-            <p> ТУТ БУДЕ  SLIDER</p>
-    </div><!--features_items-->
+<div class="line"></div>
 
-                <div class="recommended_items"><!--recommended_items-->
-                    <h2 class="title text-center">Наші роботи</h2>
-                    
-                    <div class="cycle-slideshow" 
-                         data-cycle-fx=carousel
-                         data-cycle-timeout=5000
-                         data-cycle-carousel-visible=3
-                         data-cycle-carousel-fluid=true
-                         data-cycle-slides="div.item"
-                         data-cycle-prev="#prev"
-                         data-cycle-next="#next"
-                         >                        
-                             <?php foreach ($sliderProducts as $sliderItem): ?>
-                            <div class="item">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?php echo Product::getImage($sliderItem['id']); ?>">
-                                        </div>
-                                        <?php if ($sliderItem['is_new']): ?>
-                                            <img src="/template/images/home/new.png" class="new" alt="" />
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-
-                    <a class="left recommended-item-control" id="prev" href="#recommended-item-carousel" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a class="right recommended-item-control" id="next"  href="#recommended-item-carousel" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-
-                </div>
-            </div><!--/recommended_items-->
-
-        </div>
+    <div class="slider">
+        <div><img src="/template/images/slider/3.jpg"></div>
+        <div><img src="/template/images/slider/4.jpg"></div>
+        <div><img src="/template/images/slider/1.jpg"></div>
     </div>
 
-</section>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="template/js/slick.min.js"></script>
+    <script type="text/javascript">
+        $('.slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            infinite: true,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000
+        }); 
+    </script>
 
+  
+
+</section>
+</body>
 <?php include ROOT . '/views/layouts/footer.php'; ?>

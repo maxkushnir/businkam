@@ -29,8 +29,12 @@
 
                             <p>Email:</p>
                             <input type="email" name="email" placeholder="Email" value="<?php echo $email; ?>"/>
-                            <br/>
-                            <input type="submit" name="submit" class="btn btn-default" value="Зберегти" />
+                            <p>Номер телефону:</p>
+                            <input type="phone" name="phone" placeholder="+380...." value="<?php echo $user['phone']; ?>"/>
+                            <p>Лінк на соцмережі:</p>
+                            <input type="phone" name="social_url" placeholder="+380...." value="<?php echo $user['social_url']; ?>"/>
+                            </br>
+                            <input type="submit" name="submit" class="btn btn-info" value="Зберегти" />
                         </form>
                     </div><!--/sign up form-->
                 

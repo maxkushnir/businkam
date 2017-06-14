@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Головна</title>
+        <meta name="description" content="Бортики, постель, слюнявчик, игры. Мастерская текстиля для всей семьи. Бортики, постельное, пеленки пледы, конверты, гнездышки именные слюнявчики, игрушки">
+        <meta name="author" content="@maria_businkam">
+        <title>Businkam</title>
         <link href="/template/css/bootstrap.css" rel="stylesheet">
         <link href="/template/css/font-awesome.min.css" rel="stylesheet">
         <link href="/template/css/prettyPhoto.css" rel="stylesheet">
@@ -13,8 +13,9 @@
         <link href="/template/css/animate.css" rel="stylesheet">
         <link href="/template/css/main.css" rel="stylesheet">
         <link href="/template/css/responsive.css" rel="stylesheet">
+        <link href="/template/css/slick.css" rel="stylesheet">
+        <link href="/template/css/slick-theme.css" rel="stylesheet">
         <script src="/template/js/instafeed.js"></script>
-
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -29,7 +30,7 @@
     <style type="text/css">
         #header{
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
         }
@@ -40,7 +41,11 @@
             justify-content: center;
         }
         .header-middle{
-            align-self: center;
+            display: flex;
+            align-content:         center; 
+        }
+        .logo{
+            align-content:         center;
         }
         .header-bottom{
             align-self: center;
@@ -84,14 +89,9 @@
                 </div><!--/header_top-->
 
                 <div class="header-middle"><!--header-middle-->
-                    
-                       
-                            <div class="col-sm-4">
-                                <div class="logo pull-left">
+                                <div class="logo">
                                     <a href="/"><img src="/template/images/home/logo.png" alt="" /></a>
-                                </div>
-                            </div>
-                        
+                                </div>                       
                 </div><!--/header-middle-->
 
                 <div class="header-bottom"><!--header-bottom-->                      

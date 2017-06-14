@@ -1,3 +1,4 @@
-for site background
+Site palette:
+(black peach gray white red)
 
-#f2f2f2#fffwhitesmokehsl(0,0,94)rgb(242,242,242)
+Colors: #000000, #e7938b, #CCCCCC, #FFFFFF, #FF0066

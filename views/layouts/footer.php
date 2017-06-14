@@ -22,7 +22,7 @@
 <script src="/template/js/price-range.js"></script>
 <script src="/template/js/jquery.prettyPhoto.js"></script>
 <script src="/template/js/main.js"></script>
-
+<script src="/template/js/slick.js"></script>
 
  <!-- src="//code.jquery.com/jquery-2.1.1.min.js"></script> -->
 

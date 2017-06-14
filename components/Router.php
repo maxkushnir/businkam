@@ -42,7 +42,7 @@ class Router
     {
         // Получаем строку запроса
         $uri = $this->getURI();
-
+        
         // Проверяем наличие такого запроса в массиве маршрутов (routes.php)
         foreach ($this->routes as $uriPattern => $path) {
 
@@ -83,6 +83,10 @@ class Router
                 if ($result != null) {
                     break;
                 }
+            // } else {
+            //     require_once(ROOT."/views/404.php");
+            //     $page404 = new Page();
+            //     $page404 -> actionClassNotFound();
             }
         }
     }

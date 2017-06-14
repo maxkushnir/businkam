@@ -56,6 +56,8 @@ return array(
     'contacts' => 'site/contact',
     'about' => 'site/about',
     // Главная страница
-    'index.php' => 'site/index', // actionIndex в SiteController
-    '' => 'site/index' // actionIndex в SiteController
+    'index.php' => 'Index/index',
+    'index' =>  'Index/index',
+    '/' => 'Index/index',// actionIndex в SiteController
+    '' => 'Index/index' // actionIndex в SiteController
 );

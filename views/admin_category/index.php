@@ -31,8 +31,8 @@
                         <td><?php echo $category['name']; ?></td>
                         <td><?php echo $category['sort_order']; ?></td>
                         <td><?php echo Category::getStatusText($category['status']); ?></td>  
-                        <td><button class="btn white"><a href="/admin/category/update/<?php echo $category['id']; ?>" title="Редагувати"><i class="glyphicon glyphicon-pencil"></i></a></button></td>
-                        <td><button class="deleteAjax btn btn-danger" data-nameModel="category" data-id="<?php echo $category['id']; ?>" title="Видалити"><span class="custom  glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
+                        <td><a href="/admin/category/update/<?php echo $category['id']; ?>" title="Редагувати" class="glyphicon glyphicon-pencil btn btn-info"></a></td>
+                        <td><a href="/admin/category/delete/<?php echo $category['id']; ?>" title="Видалити" class="btn btn-danger glyphicon glyphicon-trash" /></a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>
