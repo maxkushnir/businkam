@@ -3,7 +3,7 @@
 /**
  * Контроллер UserController
  */
-class UserController
+class UserController extends AdminBase
 {
     /**
      * Action для страницы "Регистрация"
@@ -114,5 +114,12 @@ class UserController
         // Перенаправляем пользователя на главную страницу
         header("Location: /");
     }
-
+    public function actionIndex()
+    {
+        self::checkAdmin();
+        $title = "Користувачі";
+        $users = User::getAllUsers();
+        require_once ROOT."/views/user/AdminUserIndex.php";
+        return true;
+    } 
 }

@@ -17,6 +17,7 @@ return array(
     'cart/addAjax/([0-9]+)' => 'cart/addAjax/$1', // actionAddAjax в CartController
     'cart' => 'cart/index', // actionIndex в CartController
     // Пользователь:
+    'admin/user' => 'user/index',
     'user/register' => 'user/register',
     'user/login' => 'user/login',
     'user/logout' => 'user/logout',
@@ -46,11 +47,12 @@ return array(
     'admin/article/delete/([0-9]+)' => 'AdminArticle/delete/$1',
     'admin/article' => 'AdminArticle/index',    
     //Галерея:
-    'admin/gallery/upload' => "AdminGallery/upload",
-    'admin/gallery' => "AdminGallery/index",
+    'admin/gallery/upload' => "AdminResource/upload",
+    'admin/gallery' => "AdminResource/index",
     // Админпанель:
     'admin' => 'admin/index',
     // О магазине
+    'gallery' => "site/gallery",
     'contacts' => 'site/contact',
     'about' => 'site/about',
     // Главная страница

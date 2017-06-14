@@ -352,7 +352,7 @@ class Product
         $noImage = 'no-image.jpg';
 
         // Путь к папке с товарами
-        $path = '/upload/images/products/';
+        $path = '/upload/images/';
 
         // Путь к изображению товара
         $pathToProductImage = $path . $id . '.jpg';

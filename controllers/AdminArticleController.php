@@ -1,8 +1,8 @@
 <?php
-class AdminArticleController {
+class AdminArticleController extends AdminBase{
 	
 	public function actionIndex(){
-		// User::checkAdmin();
+		self::checkAdmin();
 		$title = "Список статей";
 		$articles = Article::getAllArticles();
 		require_once ROOT."/views/article/AdminArticleIndex.php";
@@ -10,7 +10,7 @@ class AdminArticleController {
 	}
 
 	public function actionCreate(){
-		// User::checkAdmin();
+		self::checkAdmin();
 		$title = "Створення статті";
 		if(isset($_POST['createArticle'])){
 
@@ -34,7 +34,7 @@ class AdminArticleController {
 	}
 
 	public function actionEdit($id){
-		// User::checkAdmin();
+		self::checkAdmin();
 		if(isset($_POST['editArticle'])){
 			$date = new DateTime();
 
