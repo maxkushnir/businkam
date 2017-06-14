@@ -1,0 +1,3 @@
+for site background
+
+#f2f2f2#fffwhitesmokehsl(0,0,94)rgb(242,242,242)
