@@ -42,9 +42,16 @@ class Router
     {
         // Получаем строку запроса
         $uri = $this->getURI();
-        
+
+        // $dir = strrchr(substr($_SERVER['REQUEST_URI'], 0), "/");
+        if($uri == ""){
+            $uri .= "index";
+        }
+        $i = 0;
+
         // Проверяем наличие такого запроса в массиве маршрутов (routes.php)
         foreach ($this->routes as $uriPattern => $path) {
+        $i++;
 
             // Сравниваем $uriPattern и $uri
             if (preg_match("~$uriPattern~", $uri)) {
@@ -83,10 +90,10 @@ class Router
                 if ($result != null) {
                     break;
                 }
-            // } else {
-            //     require_once(ROOT."/views/404.php");
-            //     $page404 = new Page();
-            //     $page404 -> actionClassNotFound();
+            } elseif(count($this->routes) == $i) {
+                require_once(ROOT."/controllers/Page.php");
+                $page404 = new Page();
+                $page404 -> actionClassNotFound();
             }
         }
     }

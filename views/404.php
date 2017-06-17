@@ -1,4 +1,5 @@
  <link href="/template/css/404.css" rel="stylesheet">
+<title></title>
 
  <div id="clouds">
             <div class="cloud x1"></div>

@@ -24,18 +24,18 @@
 
             <div class="col-sm-9 padding-right">
                 <div class="features_items">
-                    <h2 class="title text-center">Корзина</h2>
+                    <h2 class="title text-center">Кошик</h2>
 
 
                     <?php if ($result): ?>
-                        <p>Заказ оформлен. Мы Вам перезвоним.</p>
+                        <p>Замовлення оформлене. Ми Вам перетелефонуємо.</p>
                     <?php else: ?>
 
-                        <p>Выбрано товаров: <?php echo $totalQuantity; ?>, на сумму: <?php echo $totalPrice; ?>, $</p><br/>
+                        <p>Вибрано товарів: <?php echo $totalQuantity; ?>, на суму:<b><?php echo $totalPrice; ?>, грн</b></p><br/>
 
                         <?php if (!$result): ?>                        
 
-                            <div class="col-sm-4">
+                            <div class="col-sm-8">
                                 <?php if (isset($errors) && is_array($errors)): ?>
                                     <ul>
                                         <?php foreach ($errors as $error): ?>
@@ -44,23 +44,29 @@
                                     </ul>
                                 <?php endif; ?>
 
-                                <p>Для оформления заказа заполните форму. Наш менеджер свяжется с Вами.</p>
-
+                                <p class="text-center">Для оформлення замовлення, будь ласка, заповніть форму.</p>
+</br>
+</br>
                                 <div class="login-form">
                                     <form action="#" method="post">
 
-                                        <p>Ваша имя</p>
+                                        <p>Ваше ім'я</p>
                                         <input type="text" name="userName" placeholder="" value="<?php echo $userName; ?>"/>
 
-                                        <p>Номер телефона</p>
-                                        <input type="text" name="userPhone" placeholder="" value="<?php echo $userPhone; ?>"/>
-
-                                        <p>Комментарий к заказу</p>
-                                        <input type="text" name="userComment" placeholder="Сообщение" value="<?php echo $userComment; ?>"/>
-
+                                        <p>Номер телефону</p>
+                                        <div class="input-group">
+                                          <span class="input-group-addon" id="basic-addon1">+38</span>
+                                          <input type="phone" class="form-control input-lg" name="userPhone" placeholder="" value="<?php echo $userPhone; ?>"/>
+                                        </div>
                                         <br/>
+                                        <p>Повідомлення</p>
+                                        <textarea class="form-control" name="userText" rows="5" id="comment" placeholder="Повідомлення" value="<?php echo $userText; ?>"></textarea>
                                         <br/>
-                                        <input type="submit" name="submit" class="btn btn-default" value="Оформить" />
+                                        <br/>                                      
+                                        <input type="submit" name="submit" class="btn btn-success" value="Оформити" />
+                                    <br/> 
+                                    <br/> 
+
                                     </form>
                                 </div>
                             </div>

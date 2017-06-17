@@ -30,25 +30,41 @@
     <style type="text/css">
         #header{
             display: flex;
-            justify-content: space-between;
-            align-items: center;
             flex-wrap: wrap;
-        }
+            justify-content: center;
+            align-items: center;
+    }
         .header_top{
             width:100%;
-        }
-        .social-icons{
-            justify-content: center;
-        }
-        .header-middle{
-            display: flex;
-            align-content:         center; 
-        }
-        .logo{
-            align-content:         center;
+            position: fixed;
+            top:0;
+            z-index:100;
+
         }
         .header-bottom{
-            align-self: center;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            top:40px;
+            margin-bottom: 5%; 
+          /*   justify-content: center;
+             align-content: center; */
+        }
+        .contactinfo{
+            margin-left:2%;
+        }
+        .useractions{
+            margin-right:2%;
+        }
+        .navbar-toggle{
+            margin-bottom: 10px;
+            right:0;
+        }
+        img{
+            margin-bottom: 5%;
         }
     </style>
 
@@ -57,44 +73,38 @@
 
 
             <header id="header"><!--header-->
-                <div class="header_top"><!--header_top-->
-                    <div class="container">
-                        <div class="social-icons row col-xs-12 col-sm-6 col-md-12">
-                            
-                                <div class="contactinfo ">
+                <div class="header_top social-icons col-xs-12"><!--header_top-->
+                                <div class="contactinfo pull-left">
                                     <ul class="nav navbar-nav">
+                                        <li class="btn btn-sm"><a href="https://www.instagram.com/maria_businkam/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+                                        <li class="btn btn-sm"><a href="https://www.facebook.com/businkam.maria"  target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
                                         <!-- <li><a href="#"><i class="fa fa-phone"></i>+38 098 11 28 952 </a></li>
                                         <li class="btn btn-sm"><a href="mailto:businkam.mail@gmail.com"><i class="fa fa-envelope"></i>businkam.mail@gmail.com </a></li> -->
-                                        <li class="btn btn-sm"><a href="https://www.instagram.com/maria_businkam/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
-                                        <li class="btn btn-sm"><a href="https://www.facebook.com/businkam.maria"><i class="fa fa-facebook fa-2x"></i></a></li>
                                     </ul>
                                 </div>
                             
-                                <div class="social-icons pull-right">
+                                <div class="useractions pull-right">
                                     <ul class="nav navbar-nav">
-                                        <li><a href="/cart">
+                                        <li class="btn btn-sm"><a href="/cart">
                                                 <i class="fa fa-shopping-cart fa-2x" ></i></a>
                                         </li>
                                         <?php if (User::isGuest()): ?>                                        
-                                            <li><a href="/user/login/"><i class="fa fa-lock fa-2x"></i></a></li>
+                                            <li class="btn btn-sm"><a href="/user/login/"><i class="fa fa-lock fa-2x"></i></a></li>
                                         <?php else: ?>
-                                            <li><a href="/cabinet/"><i class="fa fa-user fa-2x"></i></a></li>
-                                            <li><a href="/user/logout/"><i class="fa fa-unlock fa-2x"></i></a></li>
+                                            <li class="btn btn-sm"><a href="/cabinet/"><i class="fa fa-user fa-2x"></i></a></li>
+                                            <li class="btn btn-sm"><a href="/user/logout/"><i class="fa fa-unlock fa-2x"></i></a></li>
                                         <?php endif; ?>
                                     </ul>
                                 </div>
-                            
-                        </div>
-                    </div>
                 </div><!--/header_top-->
 
                 <div class="header-middle"><!--header-middle-->
-                                <div class="logo">
-                                    <a href="/"><img src="/template/images/home/logo.png" alt="" /></a>
-                                </div>                       
+                                                                    
                 </div><!--/header-middle-->
 
-                <div class="header-bottom"><!--header-bottom-->                      
+                <div class="header-bottom">
+                            <a href="/"><img src="/template/images/home/logo.png" alt="businkam.com.ua" /></a><!--header-bottom-->                      
+                            
                             <div class="main-menu">
                                 <div class="navbar-header">
                                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -106,7 +116,7 @@
                                 </div>
                                 <div class="mainmenu pull-left">
                                     <ul class="nav navbar-nav collapse navbar-collapse">
-                                        <li><a href="/">Головна</a></li>
+                                        <!-- <li><a href="/">Головна</a></li> -->
                                         <li class="dropdown"><a href="/catalog/">Магазин<i class="fa fa-angle-down"></i></a>
                                             <ul role="menu" class="sub-menu">
                                                 <li><a href="/catalog/">Каталог товарів</a></li>

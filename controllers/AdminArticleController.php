@@ -43,7 +43,7 @@ class AdminArticleController extends AdminBase{
 									$_POST['name'],
 									$_POST['description'],
 									$_POST['context'],
-									$_SESSION['user_id'],
+									$_SESSION['user'],
 									$_POST['category_id'],
 									$date->format('Y-m-d H:i:sP')
 								);

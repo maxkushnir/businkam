@@ -15,6 +15,7 @@ class ArticleController {
 	}
 
 	public function actionView($id){
+		
 		$title = "Новина $id";
 		$article = Article::getArticleById($id);
 		$user = User::getUserById($article['user_id']);

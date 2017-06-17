@@ -4,7 +4,10 @@
     <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
     <a href="/admin/product" class="breadcrumb-item active">Керування товарами</a>
 </nav>
+<style type="text/css">
+    
 
+</style>
 <section>
     <div class="container">
         <div class="row">

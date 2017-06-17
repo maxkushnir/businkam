@@ -363,12 +363,20 @@ ul.sub-menu {
 **************************/
 
 #footer {
+    position: inherit;
     background: #CCCCCC;
-    height: 50px;
+    height: 60px;
     bottom: 0;
     width:100%;
 }
-
+.footer-info-1{
+    position: absolute;
+    margin-left:5%;
+}
+.footer-info-2{
+    position: relative; 
+    margin-right:5%;
+}
 
 .footer-top .container {
     border-bottom: 1px solid #E0E0DA;
@@ -2577,4 +2585,10 @@ h2.title {
 }
 .reg-link{
     text-align: center;
+}
+.userComment{
+    height: 110px;
+}
+td{
+        text-align: center;
 }

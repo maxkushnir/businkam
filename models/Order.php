@@ -89,7 +89,7 @@ class Order
      * @param integer $id <p>id</p>
      * @return array <p>Массив с информацией о заказе</p>
      */
-    public static function getOrderById($id)
+    public static function getOrderById($id) 
     {
         // Соединение с БД
         $db = Db::getConnection();

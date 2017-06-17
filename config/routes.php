@@ -58,6 +58,7 @@ return array(
     // Главная страница
     'index.php' => 'Index/index',
     'index' =>  'Index/index',
-    '/' => 'Index/index',// actionIndex в SiteController
-    '' => 'Index/index' // actionIndex в SiteController
+    'general' => 'Index/index'
+    // '/' => 'Index/index',// actionIndex в SiteController
+    // '' => 'Index/index' // actionIndex в SiteController
 );

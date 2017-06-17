@@ -26,7 +26,7 @@ require_once ROOT."/views/layouts/header.php";
                         <?php foreach ($articles as $article):?>
                             <div class="post">
                                 <h2 class="title"><a href="/blog/article-<?php echo $article['id'];?>"><?php echo $article['name'];?></a></h2>
-                                <p class="byline"><?php echo $article['time_create'];?></p>
+                                
                                 <div class="entry">
                                     <p><?php echo $article['description'];?></p>
                                 </div>

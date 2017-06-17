@@ -16,7 +16,6 @@ class CartController
     {
         // Добавляем товар в корзину
         Cart::addProduct($id);
-
         // Возвращаем пользователя на страницу с которой он пришел
         $referrer = $_SERVER['HTTP_REFERER'];
         header("Location: $referrer");
@@ -81,7 +80,6 @@ class CartController
     {
         // Получием данные из корзины      
         $productsInCart = Cart::getProducts();
-
         // Если товаров нет, отправляем пользователи искать товары на главную
         if ($productsInCart == false) {
             header("Location: /");
@@ -131,10 +129,10 @@ class CartController
 
             // Валидация полей
             if (!User::checkName($userName)) {
-                $errors[] = 'Неправильное имя';
+                $errors[] = "Ім'я введено невірно";
             }
             if (!User::checkPhone($userPhone)) {
-                $errors[] = 'Неправильный телефон';
+                $errors[] = 'Невірний номер телефону';
             }
 
 
@@ -142,15 +140,17 @@ class CartController
                 // Если ошибок нет
                 // Сохраняем заказ в базе данных
                 $result = Order::save($userName, $userPhone, $userComment, $userId, $productsInCart);
-
+                
                 if ($result) {
                     // Если заказ успешно сохранен
-                    // Оповещаем администратора о новом заказе по почте                
-                    $adminEmail = 'php.start@mail.ru';
-                    $message = '<a href="http://digital-mafia.net/admin/orders">Список заказов</a>';
-                    $subject = 'Новый заказ!';
-                    mail($adminEmail, $subject, $message);
-
+                    // Оповещаем администратора о новом заказе по почте
+                    $headers  = 'MIME-Version: 1.0' . "\r\n";
+                    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";                
+                    $adminEmail = 'pidorboby2@ukr.net';
+                    $message = '<a href="http://businkam.com.ua/admin/order">Список замовлень</a>';
+                    $subject = "Нове замовлення від '{$userName}'!";
+                    $result = mail($adminEmail, $subject, $message, $userEmail);
+                    $result = true;
                     // Очищаем корзину
                     Cart::clear();
                 }
@@ -158,7 +158,7 @@ class CartController
         }
 
         // Подключаем вид
-        require_once(ROOT . '/views/cart/checkout.php');
+        require_once(ROOT . '/views/cart/thankyou.php');
         return true;
     }
 

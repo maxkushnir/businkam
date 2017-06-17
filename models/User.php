@@ -144,10 +144,13 @@ class User
      */
     public static function checkPhone($phone)
     {
-        if (strlen($phone) >= 10) {
+        if (strlen($phone) < 11 && is_numeric($phone)) {
             return true;
         }
+        echo (strlen($phone));
         return false;
+
+        // ^((8|\+38)-?)?(\(?0{0-9}\)?)?-?\d{3}-?\d{2}-?\d{2}$ - регулярка на перспективу
     }
 
     /**

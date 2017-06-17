@@ -1,33 +1,39 @@
 <?php include ROOT . '/views/layouts/header_admin.php'; ?>
 
-<style type="text/css">
-	
-.contain{
-	display: -webkit-flex; /* Safari */
-  display: flex;
-	justify-content:center;
-	
-	flex-wrap:nowrap;
-	text-align: center;
-}	
-.buttons{
-	align-self:baseline;
-}
-</style>
+	<style type="text/css">
 
-<section class="contain">
-  <div class="buttons col-xs-2 col-sm-6 col-md-10 col-lg-12">
-		<button type="button" class='btn btn-info white' ><a href="/admin/user/index"><div class="glyphicon glyphicon-user fa-5x"></div>
-		</button><p class="button_description">Користувачі</p></a>
-		<button type="button" class='btn btn-info white' ><a href="/admin/product"><div class="glyphicon glyphicon-list-alt fa-5x"></div>
-		</button><p class="button_description">Товари</p></a>
-		<button type="button" class='btn btn-info white' ><a href="/admin/order"><div class="glyphicon glyphicon-usd fa-5x"></div>
-		</button><p class="button_description">Замовлення</p></a>
-		<button type="button" class='btn btn-info white' ><a href="/admin/article/create"><div class="glyphicon glyphicon-pencil fa-5x"></div>
-		</button><p class="button_description">Написати в блог</p></a>
+	.wraper{
+		display: -webkit-inline-flex; /* Safari */
+	  display: inline-flex;
+	  justify-content: center;
+	  flex-wrap: wrap;
+	  align-items:center;
+	  align-content:space-between;
+	}	
+
+.wrap{
+		align-items:center;
+		text-align: center;
+	}
+	img{
+		width:30%;
+	}
+	</style>
+
+	<div class="container">
+		<div class="wraper">
+				<a href="/admin/user/index" class="wrap"><img src="/template/images/admin/user-list.svg">
+				<p class="button_description">КОРИСТУВАЧІ</p></a>
+				<a href="/admin/product/index" class="wrap"><img src="/template/images/admin/list-items.svg">
+				<p class="button_description">ТОВАРИ</p></a>
+				<a href="/admin/order" class="wrap"><img src="/template/images/admin/shopping-cart.svg">
+				<p class="button_description">ЗАМОВЛЕННЯ</p></a>
+				<a href="/admin/article/create" class="wrap"><img src="/template/images/admin/edit.svg">
+				<p class="button_description">НАПИСАТИ В БЛОГ</p></a>
+				<a href="/admin/gallery/upload" class="wrap"><img src="/template/images/admin/cloud.svg">
+				<p class="button_description">ЗАВАНТАЖИТИ</p></a>
+			</div>
 	</div>
-</section>
-
 
 
 <?php include ROOT . '/views/layouts/footer_admin.php'; ?>

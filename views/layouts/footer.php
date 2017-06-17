@@ -1,14 +1,7 @@
-    <div class="page-buffer"></div>
-</div>
-
-<footer id="footer" class="page-footer"><!--Footer-->
+<footer id="footer" class="footer"><!--Footer-->
     <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <p class="pull-left">Copyright © 2017</p>
-                <p class="pull-right">Artynov School</p>
-            </div>
-        </div>
+                <p class="pull-left footer-info-1">Businkam © 2017</p>
+                <p class="pull-right footer-info-2">Artynov School</p>
     </div>
 </footer><!--/Footer-->
 
@@ -37,6 +30,5 @@
         });
     });
 </script>
-
 </body>
 </html>

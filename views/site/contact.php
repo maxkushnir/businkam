@@ -19,13 +19,18 @@
 
                     <div class="signup-form"><!--sign up form-->
                         <h2>Зворотній зв'язок</h2>
-                        <h5>Є запитання? Нпишіть нам</h5>
+                        <h5>Є запитання? Напишіть нам</h5>
                         <br/>
                         <form action="#" method="post">
                             <p>Ваша пошта</p>
-                            <input type="email" name="userEmail" placeholder="E-mail" value="<?php echo $userEmail; ?>"/>
+                            <input type="email" class="form-control input-lg" name="userEmail" placeholder="E-mail" value="<?php echo $userEmail; ?>"/>
+                            <p>Номер телефону</p>
+                            <div class="input-group">
+                              <span class="input-group-addon" id="basic-addon1">+38</span>
+                              <input type="phone" class="form-control input-lg" name="userPhone" placeholder="" value="<?php echo $userPhone; ?>"/>
+                            </div>
                             <p>Повідомлення</p>
-                            <input type="text" name="userText" placeholder="Повідомлення" value="<?php echo $userText; ?>"/>
+                            <textarea class="form-control" name="userText" rows="5" id="comment" placeholder="Повідомлення" value="<?php echo $userText; ?>"></textarea>
                             <br/>
                             <input type="submit" name="submit" class="btn btn-default" value="Відправити" />
                         </form>

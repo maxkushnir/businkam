@@ -7,6 +7,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^(.*)$ index.php
+ErrorDocument 404 /
 
 # Попробуйте эту настройку .htaccess, если у Вас возникли проблемы с отображением
 # стилей css
@@ -19,4 +20,3 @@ RewriteRule ^(.*)$ index.php
 #RewriteRule ^.*$ - [L]
 #RewriteRule ^.*$ index.php [L]
 
-ErrorDocument 404 /template/404.php

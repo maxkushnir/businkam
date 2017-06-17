@@ -48,11 +48,13 @@ if(!empty($errors)){
 								<input type="hidden" value="<?php echo $image['name']; ?>" name="old">
 								<input type="hidden" value="<?php echo $image['id']; ?>" name="id">
 								<input type="text" value="<?php echo $filename; ?>" name="new">
+								<p class="text-center" name="address"><?php echo $address.$image['id']; ?></p>
 								<div class="gallery-buttons">
 									<button type="submit" class="btn btn-default edit"><span class="custom glyphicon glyphicon-ok" aria-hidden="true"></button>
 									<button class="deleteAjax btn btn-danger glyphicon glyphicon-remove" data-nameModel="images" data-id="<?php echo $image['id']; ?>"></button>
 								</div>
 							</form>
+
 						</div>
 					</div>
 					<?php

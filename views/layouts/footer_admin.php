@@ -3,12 +3,12 @@
     <div class="footer-middle">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2017</p>
+                <p class="pull-left">Businkam © 2017</p>
                 <p class="pull-right">Artynov School</p>
             </div>
         </div>
     </div>
-</footer><!--/Footer-->
+
 
 
 
@@ -33,6 +33,5 @@
         });
     });
 </script>
-
-</body>
+</footer><!--/Footer-->
 </html>

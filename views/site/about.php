@@ -1,11 +1,15 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
-
+<style type="text/css">
+    .content{
+        margin:2%;
+    }
+</style>
 <section>
     <div class="container">
-        <div class="row">
+        <div class="row content">
 
             <div class="col-lg-6">
-                <h4>Інформація про автора</h4>
+                <h4>Про автора</h4>
 
                 <br/>
 
@@ -26,6 +30,7 @@
                     suscipit finibus at, eleifend eget urna. Mauris laoreet metus 
                     a nisl bibendum, nec maximus urna molestie.</p>
             </div>
+            <img class="col-xs-12 col-sm-8 col-md-5"src="/template/images/blog/doll.jpg">
         </div>
     </div>
 </section>

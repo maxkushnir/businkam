@@ -24,17 +24,17 @@
 
             <div class="col-sm-9 padding-right">
                 <div class="features_items">
-                    <h2 class="title text-center">Корзина</h2>
+                    <h2 class="title text-center">Кошик </h2>
                     
                     <?php if ($productsInCart): ?>
-                        <p>Вы выбрали такие товары:</p>
-                        <table class="table-bordered table-striped table">
+                        <p>Ви обрали наступні товари:</p>
+                        <table class="table-bordered table-striped table text-center">
                             <tr>
-                                <th>Код товара</th>
-                                <th>Название</th>
-                                <th>Стомость, $</th>
-                                <th>Количество, шт</th>
-                                <th>Удалить</th>
+                                <th>Код товару</th>
+                                <th>Назва</th>
+                                <th>Вартість, грн</th>
+                                <th>Кількість, шт</th>
+                                <th>Видалити</th>
                             </tr>
                             <?php foreach ($products as $product): ?>
                                 <tr>
@@ -48,23 +48,23 @@
                                     <td><?php echo $productsInCart[$product['id']];?></td> 
                                     <td>
                                         <a href="/cart/delete/<?php echo $product['id'];?>">
-                                            <i class="fa fa-times"></i>
+                                            <i class="btn btn-danger fa fa-times"></i>
                                         </a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                                 <tr>
-                                    <td colspan="4">Общая стоимость, $:</td>
-                                    <td><?php echo $totalPrice;?></td>
+                                    <td colspan="4">Загальна вартість, грн:</td>
+                                    <td><?php echo $totalPrice;?> грн</td>
                                 </tr>
                             
                         </table>
                         
-                        <a class="btn btn-default checkout" href="/cart/checkout"><i class="fa fa-shopping-cart"></i> Оформить заказ</a>
+                        <a class="btn btn-default checkout" href="/cart/checkout"><i class="fa fa-shopping-cart"></i> Оформити замовлення</a>
                     <?php else: ?>
-                        <p>Корзина пуста</p>
+                        <p>Кошик пустий :(</p>
                         
-                        <a class="btn btn-default checkout" href="/"><i class="fa fa-shopping-cart"></i> Вернуться к покупкам</a>
+                        <a class="btn btn-default checkout" href="/catalog"><i class="fa fa-shopping-cart"></i> Повернутись до покупок</a>
                     <?php endif; ?>
 
                 </div>

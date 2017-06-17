@@ -23,6 +23,7 @@ require_once ROOT."/views/layouts/header_admin.php";
     <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
     <a href="/admin/article" class="breadcrumb-item active"><?php echo $title; ?></a>
 </nav>  
+
 <div class="container table-my">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -43,7 +44,7 @@ require_once ROOT."/views/layouts/header_admin.php";
                         <td><?php echo $article['name']; ?></td>
                         <td><?php echo $article['user_id']; ?></td>
                         <td><?php echo $article['time_create']; ?></td>
-                        <td><button class="btn white"><a href="/admin/article/edit/<?php echo $article['id']; ?>"><span class="custom glyphicon glyphicon-pencil text-center"></span></a></button></td>
+                        <td><a href="/admin/article/edit/<?php echo $article['id']; ?>" class="btn btn-info glyphicon glyphicon-pencil"></a></td>
                         <td><button class="deleteAjax btn btn-danger" data-nameModel="article" data-id="<?php echo $article['id']; ?>" title="Видалити"><span class="custom  glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
                     </tr>
                     <?php

@@ -11,7 +11,7 @@ class AdminResourceController extends AdminBase{
 		unset($allFiles[0]);
 		unset($allFiles[1]);
 		sort($allFiles);
-
+ 
 		$errors = [];
 
 		if ($_POST) {

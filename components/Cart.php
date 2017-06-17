@@ -70,6 +70,7 @@ class Cart
      */
     public static function getProducts()
     {
+        // print_r($_SESSION["products"]);
         if (isset($_SESSION['products'])) {
             return $_SESSION['products'];
         }

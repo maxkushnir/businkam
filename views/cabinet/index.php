@@ -1,6 +1,8 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
 <section>
+<?php $order = Order::getOrderById($user["id"]);
+print_r($order); ?>
     <div class="container">
         <div class="row">
 

@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 /**
  * Контроллер CartController
@@ -26,43 +26,48 @@ class SiteController
     }
 
     /**
-     * Action для страницы "Контакты"
+     * Action для сторінки "Контакти"
      */
     public function actionContact()
     {
 
         // Змінні для форми
         $userEmail = false;
+        $userPhone = false;
         $userText = false;
         $result = false;
 
         // Обробка форми
         if (isset($_POST['submit'])) {
-            // Если форма отправлена 
-            // Получаем данные из формы
+            // Якщо форма відправлена 
+            // Отримуємо данні з форми
             $userEmail = $_POST['userEmail'];
             $userText = $_POST['userText'];
-
-            // Флаг ошибок
+            $userPhone = $_POST['userPhone'];
+            // Помилки
             $errors = false;
 
             // Валідація полів
             if (!User::checkEmail($userEmail)) {
                 $errors[] = 'Неправильний email';
             }
-
+            if (!User::checkPhone($userPhone)){
+                $errors[] = 'Неправильний номер телефону';
+            }
             if ($errors == false) {
                 // Якщо помилок немає
                 // Відправляємо лист адміністратору 
-                $adminEmail = 'businkam.mail@gmail.com';
-                $message = "Текст: {$userText}. От {$userEmail}";
-                $subject = 'Тема листа';
-                $result = mail($adminEmail, $subject, $message);
+                $headers  = 'MIME-Version: 1.0' . "\r\n";
+                $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                $adminEmail = 'pidorboby2@ukr.net';
+                $message = "Номер телефону: {$userPhone}\r\nПовідомлення: {$userText}.";
+                $subject = "Лист від {$userEmail}";
+                $result = mail($adminEmail, $subject, $message, $userEmail);
                 $result = true;
             }
         }
 
-        // Підключаємо вид
+        // Підключаємо вигляд
         require_once(ROOT . '/views/site/contact.php');
         return true;
     }
@@ -72,13 +77,13 @@ class SiteController
      */
     public function actionAbout()
     {
-        // Подключаем вид
+        // Підключаемо вигляд
         require_once(ROOT . '/views/site/about.php');
         return true;
     }
     public function actionGallery()
     {
-        // Подключаем вид
+        // Підключаемо вигляд
         require_once(ROOT . '/views/site/gallery.php');
         return true;
     }
