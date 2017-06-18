@@ -4,8 +4,12 @@
 .product-image-wrapper{
     display:flex;
     justify-content:space-around;
-    align-items:         center;
-    align-content:          space-around;
+    align-items: center;
+    align-content: space-around;
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
     .slider{
         margin:1%;
@@ -30,9 +34,6 @@
             <div><a href="/blog/article-3"><img src="/template/images/slider/4.jpg"></a></div>
             <div><a href="/blog/article-3"><img src="/template/images/slider/1.jpg"></a></div>
         </div>
-
-        <div class="line"></div>
-
         <div class="features_items"><!--features_items-->
                     <h2 class="title text-center">НАШІ РОБОТИ</h2>
 
@@ -41,14 +42,8 @@
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
-                                        <img src="<?php echo Product::getImage($product['id']); ?>" alt="" />
-                                        <h2>$<?php echo $product['price']; ?></h2>
-                                        <p>
-                                            <a href="/product/<?php echo $product['id']; ?>">
-                                                <?php echo $product['name']; ?>
-                                            </a>
-                                        </p>
-                                        <a href="#" class="btn btn-default add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В кошик</a>
+                                       <a href="/product/<?php echo $product['id']; ?>"> <img src="<?php echo Product::getImage($product['id']); ?>" class="hvr-grow" alt=""  title="<?php echo $product['name']; ?>" />
+                                  <!-- <a href="#" class="btn btn-default add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В кошик</a> -->
                                     </div>
                                     <?php if ($product['is_new']): ?>
                                         <img src="/template/images/home/new.png" class="new" alt="" />

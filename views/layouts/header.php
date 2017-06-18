@@ -15,7 +15,7 @@
         <link href="/template/css/responsive.css" rel="stylesheet">
         <link href="/template/css/slick.css" rel="stylesheet">
         <link href="/template/css/slick-theme.css" rel="stylesheet">
-        
+        <link href="/template/css/hover.css" rel="stylesheet">
         <script src="/template/js/instafeed.js"></script>
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -118,12 +118,7 @@
                                 <div class="mainmenu pull-left">
                                     <ul class="nav navbar-nav collapse navbar-collapse">
                                         <!-- <li><a href="/">Головна</a></li> -->
-                                        <li class="dropdown"><a href="/catalog/">Магазин<i class="fa fa-angle-down"></i></a>
-                                            <ul role="menu" class="sub-menu">
-                                                <li><a href="/catalog/">Каталог товарів</a></li>
-                                                <li><a href="/cart/">Корзина</a></li> 
-                                            </ul>
-                                        </li>
+                                        <li><a href="/catalog/">Магазин</a></li>
                                         <li><a href="/blog/">Блог</a></li>
                                         <li><a href="/gallery/">Портфоліо</a></li>
                                         <li><a href="/about/">Про</a></li>
