@@ -15,6 +15,7 @@
     <script src="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/html5shiv.js"></script>
 </head>
 <body>
+
     <header class="site-header" id="header">
         <h1 class="site-header__title" data-lead-id="site-header-title">ДЯКУЄМО!</h1>
     </header>
@@ -23,5 +24,6 @@
         <i class="fa fa-check main-content__checkmark" id="checkmark"></i>
         <p class="main-content__body" data-lead-id="main-content-body">Відгуки про наші роботи Ви можете знайти в соціальних мережах <a href="https://www.instagram.com/maria_businkam/" target="_blank">INSTAGRAM</a> та <a href="https://www.facebook.com/businkam.maria"  target="_blank">FACEBOOK</a>. Також радітимемо, якщо Ви залишите власний відгук про нас :)</p></br>
     </div>
-    
+</body>
+
 <?php include ROOT . '/views/layouts/footer.php'; ?>

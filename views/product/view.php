@@ -38,31 +38,53 @@
                                 <?php endif; ?>
 
                                 <h2><?php echo $product['name']; ?></h2>
-                                <p>Код товара: <?php echo $product['code']; ?></p>
+                                <p>Код товару: <?php echo $product['code']; ?></p>
                                 <span>
-                                    <span>US $<?php echo $product['price']; ?></span>
+                                    <span><?php echo $product['price']; ?> грн</span>
                                     <a href="#" data-id="<?php echo $product['id']; ?>"
                                        class="btn btn-default add-to-cart">
-                                        <i class="fa fa-shopping-cart"></i>В корзину
+                                        <i class="fa fa-shopping-cart"></i>В кошик
                                     </a>
                                 </span>
-                                <p><b>Наличие:</b> <?php echo Product::getAvailabilityText($product['availability']); ?></p>
-                                <p><b>Производитель:</b> <?php echo $product['brand']; ?></p>
+                                <p><b>Статус:</b> <?php echo Product::getAvailabilityText($product['availability']); ?></p>
+                                <!-- <p><b>Производитель:</b> <?php echo $product['brand']; ?></p> -->
                             </div><!--/product-information-->
                         </div>
                     </div>
                     <div class="row">                                
                         <div class="col-sm-12">
                             <br/>
-                            <h5>Описание товара</h5>
+                            <h5>Опис товару</h5>
                             <?php echo $product['description']; ?>
                         </div>
                     </div>
                 </div><!--/product-details-->
-
+                <div id="disqus_thread"></div>
             </div>
         </div>
     </div>
+<!-- DISCUS COMMENTS -->
+       
+        <script>
+
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://businkam-com-ua.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            
 </section>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>

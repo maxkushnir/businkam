@@ -59,7 +59,7 @@ class SiteController
                 // Відправляємо лист адміністратору 
                 $headers  = 'MIME-Version: 1.0' . "\r\n";
                 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-                $adminEmail = 'pidorboby2@ukr.net';
+                $adminEmail = 'businkam.mail@gmail.com';
                 $message = "Номер телефону: {$userPhone}\r\nПовідомлення: {$userText}.";
                 $subject = "Лист від {$userEmail}";
                 $result = mail($adminEmail, $subject, $message, $userEmail);

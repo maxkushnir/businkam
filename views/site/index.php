@@ -1,6 +1,12 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 <body>
 <style type="text/css">
+.product-image-wrapper{
+    display:flex;
+    justify-content:space-around;
+    align-items:         center;
+    align-content:          space-around;
+}
     .slider{
         margin:1%;
     }
@@ -17,14 +23,48 @@
 <section>
 
     <div class="container">
-        <div class="line"></div>
+       <!--  <div class="line"></div> -->
 
         <div class="slider">
-            <div><img src="/template/images/slider/3.jpg"></div>
-            <div><img src="/template/images/slider/4.jpg"></div>
-            <div><img src="/template/images/slider/1.jpg"></div>
+            <div><a href="/blog/article-3"><img src="/template/images/slider/3.jpg"></a></div>
+            <div><a href="/blog/article-3"><img src="/template/images/slider/4.jpg"></a></div>
+            <div><a href="/blog/article-3"><img src="/template/images/slider/1.jpg"></a></div>
         </div>
 
+        <div class="line"></div>
+
+        <div class="features_items"><!--features_items-->
+                    <h2 class="title text-center">НАШІ РОБОТИ</h2>
+
+                    <?php foreach ($latestProducts as $product): ?>
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="<?php echo Product::getImage($product['id']); ?>" alt="" />
+                                        <h2>$<?php echo $product['price']; ?></h2>
+                                        <p>
+                                            <a href="/product/<?php echo $product['id']; ?>">
+                                                <?php echo $product['name']; ?>
+                                            </a>
+                                        </p>
+                                        <a href="#" class="btn btn-default add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В кошик</a>
+                                    </div>
+                                    <?php if ($product['is_new']): ?>
+                                        <img src="/template/images/home/new.png" class="new" alt="" />
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+
+
+                </div><!--features_items-->  
+
+
+
+<!-- SCRIPTS -->
+        
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="template/js/slick.min.js"></script>
@@ -37,7 +77,8 @@
                 fade: true,
                 cssEase: 'linear',
                 autoplay: true,
-                autoplaySpeed: 5000
+                autoplaySpeed: 5000,
+                // arrows: false
             }); 
         </script>
 

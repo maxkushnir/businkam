@@ -15,6 +15,7 @@
         <link href="/template/css/responsive.css" rel="stylesheet">
         <link href="/template/css/slick.css" rel="stylesheet">
         <link href="/template/css/slick-theme.css" rel="stylesheet">
+        
         <script src="/template/js/instafeed.js"></script>
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
