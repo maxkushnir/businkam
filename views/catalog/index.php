@@ -1,5 +1,9 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
-
+<style type="text/css">
+    .product-header{
+        margin-top: 0;
+    }
+</style>
 <section>
     <div class="container">
         <div class="row">
@@ -24,7 +28,7 @@
 
             <div class="col-sm-9 padding-right">
                 <div class="features_items"><!--features_items-->
-                    <h2 class="title text-center">Останні товари</h2>
+                    <h2 class="title text-center">Товари</h2>
                     
                     <?php foreach ($latestProducts as $product): ?>
                         <div class="col-sm-4">
@@ -32,7 +36,7 @@
                                 <div class="single-products">
                                     <div class="productinfo text-center">
                                         <img src="<?php echo Product::getImage($product['id']); ?>" alt="" />
-                                        <h2>$<?php echo $product['price'];?></h2>
+                                        <h2 class="product-header"><?php echo $product['price'];?> грн</h2>
                                         <p>
                                             <a href="/product/<?php echo $product['id'];?>">
                                                 <?php echo $product['name'];?>

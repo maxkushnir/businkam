@@ -37,12 +37,12 @@ img {
         <div class="features_items"><!--features_items-->
                     <h2 class="title text-center">НАШІ РОБОТИ</h2>
 
-                    <?php foreach ($latestProducts as $product): ?>
+                    <?php foreach ($sliderProducts as $product): ?>
                         <div class="col-sm-4">
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
-                                       <a href="/product/<?php echo $product['id']; ?>"> <img src="<?php echo Product::getImage($product['id']); ?>" class="hvr-grow" alt=""  title="<?php echo $product['name']; ?>" />
+                                       <a href="/product/<?php echo $product['id']; ?>"> <img src="<?php echo Product::getImage($product['id']); ?>" class="hvr-grow" alt=""/>
                                   <!-- <a href="#" class="btn btn-default add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В кошик</a> -->
                                     </div>
                                     <?php if ($product['is_new']): ?>

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Бортики, постель, слюнявчик, игры. Мастерская текстиля для всей семьи. Бортики, постельное, пеленки пледы, конверты, гнездышки именные слюнявчики, игрушки">
         <meta name="author" content="@maria_businkam">
-        <title>Businkam</title>
+        <title>BusinkaM</title>
         <link href="/template/css/bootstrap.css" rel="stylesheet">
         <link href="/template/css/font-awesome.min.css" rel="stylesheet">
         <link href="/template/css/prettyPhoto.css" rel="stylesheet">

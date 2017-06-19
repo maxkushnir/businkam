@@ -51,9 +51,9 @@
 
                         <br/><br/>
 
-<!--                         <p>Виробник</p>
+                        <p>Виробник</p>
                         <input type="text" name="brand" placeholder="" value="">
- -->
+<!--  -->
                         <p>Зображення товару</p>
                         <input type="file" name="image" placeholder="" value="">
 
