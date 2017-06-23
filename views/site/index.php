@@ -2,9 +2,6 @@
 
         <link href="/template/css/slider-def.css" rel="stylesheet">
 
-<style type="text/css">
-
-</style>
 <section>
 
     <div class="container">

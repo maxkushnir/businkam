@@ -93,8 +93,8 @@
                 <div class="header_top social-icons col-xs-12"><!--header_top-->
                                 <div class="contactinfo pull-left">
                                     <ul class="nav navbar-nav">
-                                        <li class="btn btn-sm"><a href="https://www.instagram.com/maria_businkam/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
-                                        <li class="btn btn-sm"><a href="https://www.facebook.com/businkam.maria"  target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+                                        <li class="btn btn-sm"><a href="https://www.instagram.com/maria_businkam/" target="_blank" title="Instagram"><i class="fa fa-instagram fa-2x"></i></a></li>
+                                        <li class="btn btn-sm"><a href="https://www.facebook.com/businkam.maria"  target="_blank" title="Facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
                                         <!-- <li><a href="#"><i class="fa fa-phone"></i>+38 098 11 28 952 </a></li>
                                         <li class="btn btn-sm"><a href="mailto:businkam.mail@gmail.com"><i class="fa fa-envelope"></i>businkam.mail@gmail.com </a></li> -->
                                     </ul>
@@ -102,14 +102,14 @@
                             
                                 <div class="useractions pull-right">
                                     <ul class="nav navbar-nav">
-                                        <li class="btn btn-sm"><a href="/cart">
+                                        <li class="btn btn-sm"><a href="/cart" title="Кошик">
                                                 <i class="fa fa-shopping-cart fa-2x" ></i></a>
                                         </li>
                                         <?php if (User::isGuest()): ?>                                        
-                                            <li class="btn btn-sm"><a href="/user/login/"><i class="fa fa-lock fa-2x"></i></a></li>
+                                            <li class="btn btn-sm"><a href="/user/login/" title="Вхід"><i class="fa fa-lock fa-2x"></i></a></li>
                                         <?php else: ?>
-                                            <li class="btn btn-sm"><a href="/cabinet/"><i class="fa fa-user fa-2x"></i></a></li>
-                                            <li class="btn btn-sm"><a href="/user/logout/"><i class="fa fa-unlock fa-2x"></i></a></li>
+                                            <li class="btn btn-sm"><a href="/cabinet/" title="Кабінет"><i class="fa fa-user fa-2x"></i></a></li>
+                                            <li class="btn btn-sm"><a href="/user/logout/" title="Вихід"><i class="fa fa-unlock fa-2x"></i></a></li>
                                         <?php endif; ?>
                                     </ul>
                                 </div>
@@ -121,7 +121,7 @@
 
                 <div class="header-bottom">
                             <div>
-                            <a href="/"><img src="/template/images/home/logo.png" alt="businkam.com.ua" /></a><!--header-bottom-->                      
+                            <a href="/"><img src="/template/images/home/logo.png" alt="businkam.com.ua" title="Головна"/></a><!--header-bottom-->                      
                             <div class="marquee">Майстерня текстилю для дітей та дорослих!</div>
                             </div>
                             <div class="main-menu">
@@ -140,7 +140,7 @@
                                         <li><a href="/blog/">Блог</a></li>
                                         <li><a href="/gallery/">Портфоліо</a></li>
                                         <li><a href="/about/">Про</a></li>
-                                        <li><a href="/contacts/">Контакти</a></li>
+                                        <li><a href="/contacts/">Зв'язок</a></li>
                                     </ul>
                                 </div>
                             </div>

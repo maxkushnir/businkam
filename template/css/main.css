@@ -2623,3 +2623,68 @@ td{
         max-width: 100%;
         position:relative;
     }
+/* Instagram */
+#instafeed{
+  display:inline-flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+  bottom: 10px;
+}
+#instafeed .insta-link{
+  position: relative;
+}
+#instafeed .insta-img {
+  border-radius: 6px;
+  margin:10px;
+  border:1px solid #e1e1e1;
+  height: 250px;
+  width: auto;
+}
+#instafeed .insta-logo{
+  font-size:1em;
+  color:#ffffff;
+  opacity:0;
+  bottom:10px;
+  left:17px;
+  position: absolute;
+  line-height:20px;
+  text-shadow:0 1px rgba(0,0,0,0.5);
+  -webkit-font-smoothing:antialiased;
+  -webkit-transition: opacity 100ms ease;
+    -moz-transition: opacity 100ms ease;
+    -o-transition: opacity 100ms ease;
+    -ms-transition: opacity 100ms ease;
+    transition: opacity 100ms ease;
+}
+#instafeed .likes {
+  background:rgba(222,89,135,0.8);
+  font-family:sans-serif;
+  font-size:1em;
+  color:#ffffff;
+  width:92%;
+  opacity:0;
+  border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  bottom:10px;
+  left:11px;
+  position: absolute;
+  text-align:center;
+  line-height:20px;
+  text-shadow:0 1px rgba(0,0,0,0.5);
+  -webkit-font-smoothing:antialiased;
+  -webkit-transition: opacity 100ms ease;
+    -moz-transition: opacity 100ms ease;
+    -o-transition: opacity 100ms ease;
+    -ms-transition: opacity 100ms ease;
+    transition: opacity 100ms ease;
+}
+
+#instafeed a:hover .likes{
+  opacity:1;
+}
+#instafeed a:hover .insta{
+  opacity:1;
+}
