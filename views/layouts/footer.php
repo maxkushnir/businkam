@@ -1,7 +1,7 @@
 <footer id="footer" class="footer"><!--Footer-->
-    <div class="footer-bottom">
-                <p class="pull-left footer-info-1">Businkam © 2017</p>
-                <p class="pull-right footer-info-2">Artynov School</p>
+    <div class="footer-bottom col-xs-12">
+                <a href="/" class=" footer-info-1 col-xs-6">Businkam</a>
+               <!--  <a href="" class="pull-right footer-info-2 col-xs-6">Instagram</a> -->
     </div>
 </footer><!--/Footer-->
 
@@ -15,7 +15,7 @@
 <script src="/template/js/price-range.js"></script>
 <script src="/template/js/jquery.prettyPhoto.js"></script>
 <script src="/template/js/main.js"></script>
-<script src="/template/js/slick.js"></script>
+
 
  <!-- src="//code.jquery.com/jquery-2.1.1.min.js"></script> -->
 

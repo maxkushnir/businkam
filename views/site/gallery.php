@@ -1,5 +1,5 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
-
+<script src="/template/js/instafeed.js"></script>
 
 <style type="text/css">
 
@@ -9,14 +9,17 @@
 	justify-content:center;
 	align-content:center;
 	align-items:center;
+  bottom: 10px;
 }
 #instafeed a{
   position: relative;
 }
 #instafeed img {
-  border-radius: 5px;
+  border-radius: 6px;
   margin:10px;
   border:1px solid #e1e1e1;
+  height: 250px;
+  width: auto;
 }
 #instafeed .insta{
   font-size:1em;
@@ -39,11 +42,13 @@
   font-family:sans-serif;
   font-size:1em;
   color:#ffffff;
-  width:94%;
+  width:92%;
   opacity:0;
-  border-radius: 5px;
+  border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
   bottom:10px;
-  left:10px;
+  left:11px;
   position: absolute;
   text-align:center;
   line-height:20px;
@@ -77,6 +82,7 @@
   </script>
 
 	<div id="instafeed" class="likes col-xs-12"></div>
+
 </div>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>

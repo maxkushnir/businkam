@@ -2596,3 +2596,30 @@ td{
 #disqus_thread{
     /* width: 80%; */
 }
+.wrap-product{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    align-content: space-around;
+    max-height: 250px;
+    width: auto;
+}
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+#product-new-label{
+    top:9px;
+    left:auto;
+    position: absolute;
+
+}
+    .line{
+        display: block;
+        position:relative;
+        margin-top:10px;
+        border-bottom: 2px solid #AFAFAF;
+        line-height: 2px;
+        max-width: 100%;
+        position:relative;
+    }

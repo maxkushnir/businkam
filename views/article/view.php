@@ -9,12 +9,13 @@ require_once ROOT."/views/layouts/header.php";
 <div class="content">
 		<div class="container">
 			
-				<h1><?php echo $article['name'] ;?></h1>
-				
+				<h1 class="text-center"><?php echo $article['name'] ;?></h1>
+				</br>
 				<div class="context"><?php
 					echo $article['context'];
 				?>
 				</div>
+                                </br>
 				<!-- <span class="articleTime pull-right"><?php echo $article['time_create'] ;?></span> -->
 				<div id="disqus_thread"></div>
 		</div>
@@ -44,5 +45,5 @@ require_once ROOT."/views/layouts/header.php";
         })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
+    </br>
 <?php require_once ROOT."/views/layouts/footer.php"; ?>

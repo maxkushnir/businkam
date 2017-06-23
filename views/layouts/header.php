@@ -13,10 +13,9 @@
         <link href="/template/css/animate.css" rel="stylesheet">
         <link href="/template/css/main.css" rel="stylesheet">
         <link href="/template/css/responsive.css" rel="stylesheet">
-        <link href="/template/css/slick.css" rel="stylesheet">
-        <link href="/template/css/slick-theme.css" rel="stylesheet">
+
         <link href="/template/css/hover.css" rel="stylesheet">
-        <script src="/template/js/instafeed.js"></script>
+        
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -67,6 +66,23 @@
         img{
             margin-bottom: 5%;
         }
+
+        @-webkit-keyframes typing { from { width: 0; } }
+        @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+        .marquee { 
+            position: relative;
+            font: bold 1em monospace;
+            color: black;
+            /* border-right: .05em solid black; */
+            width: calc(0.55em * 15); 
+            width: 42ch;
+            white-space: nowrap;
+            overflow: hidden;
+            color:#9c9a98;
+            -webkit-animation: typing 6s steps(42, end),
+                       blink-caret .3s step-end infinite alternate;
+        }
     </style>
 
     <body>
@@ -104,8 +120,10 @@
                 </div><!--/header-middle-->
 
                 <div class="header-bottom">
+                            <div>
                             <a href="/"><img src="/template/images/home/logo.png" alt="businkam.com.ua" /></a><!--header-bottom-->                      
-                            
+                            <div class="marquee">Майстерня текстилю для дітей та дорослих!</div>
+                            </div>
                             <div class="main-menu">
                                 <div class="navbar-header">
                                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
